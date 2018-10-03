@@ -4,22 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { MorningCompassComponent } from './components/morning-compass/morning-compass.component';
+import { MessageModule } from './message/message.module';
 
 const routes: Routes = [ 
   { path: '', redirectTo: '/morning-compass', pathMatch: 'full' },
-  { path: 'morning-compass', component: MorningCompassComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MorningCompassComponent
+    
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     SharedModule,
+    MessageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
