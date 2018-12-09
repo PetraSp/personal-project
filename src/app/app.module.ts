@@ -1,26 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+// import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { MessageModule } from './message/message.module';
+import { AppRoutingModule } from './app-routing.module';
+import { PrayersModule } from './prayers/prayers.module';
+import { ShellComponent } from './home/shell.component';
+import { MenuComponent } from './home/menu.component';
+import { WelcomeComponent } from './home/welcome.component';
 
-const routes: Routes = [ 
-  { path: '', redirectTo: '/morning-compass', pathMatch: 'full' },
-];
 
 @NgModule({
   declarations: [
     AppComponent,
+    ShellComponent,
+    MenuComponent,
+    WelcomeComponent,
     
   ],
+  
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
     SharedModule,
-    MessageModule,
+    BrowserAnimationsModule,
+    StoreModule.forRoot({}),
+    AppRoutingModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

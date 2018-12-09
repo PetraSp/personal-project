@@ -1,0 +1,19 @@
+
+.list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    mat-card {
+        width: 30%;
+        margin: 0 1em;
+    }
+}
+
+.card {
+    border: none;
+}
+
+.btn-showImage {
+    margin: 20px 0 0 15px;
+}

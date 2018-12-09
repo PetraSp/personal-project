@@ -1,9 +1,0 @@
-{{pageTitle}}
-<div *ngIf='messages && messages.length'>
-    <ul *ngFor= 'let message of messages'>
-        <li>{{message.messageName}}</li>
-        <li>{{message.description}}</li>
-        <button (click)="flagContent()"></button>
-    </ul>
-</div>
-
